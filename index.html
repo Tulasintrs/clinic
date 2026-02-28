@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HealthCare - Clinic Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2>🏥 HealthCare</h2>
+    <div class="nav-links">
+        <a onclick="showPage('home')">Home</a>
+        <a onclick="showPage('doctors')">Doctors</a>
+        <a onclick="showPage('appointments')">Appointments</a>
+        <a onclick="showPage('about')">About</a>
+        <a onclick="showPage('contact')">Contact</a>
+        <a onclick="showPage('signup')">Signup</a>
+        <a onclick="showPage('login')">Login</a>
+    </div>
+</div>
+
+<!-- HOME PAGE -->
+<div id="home" class="page active">
+    <div class="hero">
+        <h1>Welcome to HealthCare Clinic</h1>
+        <p>Your health is our priority</p>
+    </div>
+</div>
+
+<!-- SIGNUP PAGE -->
+<div id="signup" class="page">
+    <h2>Patient Signup</h2>
+    <input id="sname" placeholder="Full Name">
+    <input id="semail" placeholder="Email">
+    <input id="spass" type="password" placeholder="Password">
+    <input id="scpass" type="password" placeholder="Confirm Password">
+    <input id="sphone" placeholder="Contact Number">
+    <button onclick="signup()">Signup</button>
+    <p id="smsg" class="message"></p>
+</div>
+
+<!-- LOGIN PAGE -->
+<div id="login" class="page">
+    <h2>Patient Login</h2>
+    <input id="lemail" placeholder="Email">
+    <input id="lpass" type="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p id="lmsg" class="message"></p>
+</div>
+
+<!-- DOCTORS PAGE -->
+<div id="doctors" class="page">
+    <h2>Our Doctors</h2>
+    <div id="doctorList" class="doctors"></div>
+</div>
+
+<!-- APPOINTMENTS PAGE -->
+<div id="appointments" class="page">
+    <h2>Book Appointment</h2>
+    <input id="apname" placeholder="Patient Name">
+    <input id="apdoctor" placeholder="Select Doctor">
+    <input id="apdate" type="date">
+    <input id="aptime" type="time">
+    <input id="apreason" placeholder="Reason/Notes">
+    <button onclick="bookAppointment()">Book Appointment</button>
+    <p id="apmsg" class="message"></p>
+
+    <h3>Your Appointments</h3>
+    <table id="appointmentTable"></table>
+</div>
+
+<!-- ABOUT PAGE -->
+<div id="about" class="page">
+    <h2>About HealthCare Clinic</h2>
+    <p>We are dedicated to providing quality healthcare services...</p>
+</div>
+
+<!-- CONTACT PAGE -->
+<div id="contact" class="page">
+    <h2>Contact Us</h2>
+    <input id="cname" placeholder="Name">
+    <input id="cemail" placeholder="Email">
+    <textarea id="cmsg" placeholder="Message"></textarea>
+    <button onclick="contact()">Send Message</button>
+    <p id="cstatus" class="message"></p>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-content">
+        <div>
+            <h3>HealthCare</h3>
+            <p>Your trusted clinic for healthcare.</p>
+        </div>
+        <div>
+            <h4>Quick Links</h4>
+            <p onclick="showPage('home')">Home</p>
+            <p onclick="showPage('doctors')">Doctors</p>
+            <p onclick="showPage('appointments')">Appointments</p>
+            <p onclick="showPage('contact')">Contact</p>
+        </div>
+        <div>
+            <h4>Contact</h4>
+            <p>📍 India</p>
+            <p>📧 support@healthcare.com</p>
+            <p>📞 9876543210</p>
+        </div>
+    </div>
+    <hr>
+    <p class="copyright">© 2026 HealthCare. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
